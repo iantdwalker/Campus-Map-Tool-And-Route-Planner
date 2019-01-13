@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>Campus Route Planner</title>
+    <table width="100%" border="0" bordercolor="white">
+        <tr>
+            <td align="center" style="font-family:century; font-size:100%; color:blue">--- Campus Route Planner ---</td>
+        </tr>    
+    </table>
+  </head>  
+  <script language="JavaScript">
+        
+    function applet()
+    {
+        if (navigator.appName.indexOf("Microsoft")!=-1)
+        {
+            document.write('<applet code=appletpackage.AppletGui archive=AppletProject.jar width=' + (document.body.offsetWidth-42) + ' height=' + (document.body.offsetHeight-122) + '>');
+        }
+        
+        else if (navigator.appName=="Netscape")
+        {
+            document.write('<applet code=appletpackage.AppletGui archive=AppletProject.jar width=' + (window.innerWidth-20) + ' height=' + (window.innerHeight-95) + '>');
+        }
+        
+        document.write('</applet>');
+    }
+        
+  </script>  
+  <body>
+  <hr color="blue">
+    <table width="100%" border="0" bordercolor="white">
+        <tr>
+            <td align="left"><a href="index.jsp">Home</a></td>
+        </tr>
+    </table>
+    <BR>
+    <script language="JavaScript">
+        applet();
+    </script>    
+  </body>
+</html>

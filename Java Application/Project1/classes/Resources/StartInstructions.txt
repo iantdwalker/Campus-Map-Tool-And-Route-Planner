@@ -1,0 +1,21 @@
+Getting started:
+
+1) 'File' and 'Open Map Image' to open an image that map graphs can be created with.
+
+Next...
+
+2) 'File' and 'Open XML Graph' to open existing map graphs saved as XML.
+
+Or...
+
+3) 'Edit' and 'Insert Node' to begin creating a map graph by inserting nodes.
+
+To ensure that you can successfully create a map graph you must adhere to the following
+guidelines:
+
+-Place at least two nodes and one edge.
+-Give at least two nodes a name other than 'Choice Point'.
+-Connect all nodes on the graph with at least one edge.
+-Ensure that the graph is fully connected (see help for further explanation).
+
+For further help please see 'Help' and 'User Help'.

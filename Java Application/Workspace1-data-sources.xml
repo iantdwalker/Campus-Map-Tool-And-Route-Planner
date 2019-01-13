@@ -1,0 +1,5 @@
+<?xml version = '1.0' encoding = 'windows-1252'?>
+<!DOCTYPE data-sources PUBLIC "Orion data-sources" "http://xmlns.oracle.com/ias/dtds/data-sources.dtd">
+<data-sources>
+  <data-source name="jdev-connection-DBConnection1" class="com.evermind.sql.DriverManagerDataSource" location="jdbc/DBConnection1CoreDS" xa-location="jdbc/xa/DBConnection1XADS" ejb-location="jdbc/DBConnection1DS" pooled-location="jdbc/DBConnection1PooledDS" connection-driver="sun.jdbc.odbc.JdbcOdbcDriver" url="jdbc:odbc:University" inactivity-timeout="30"/>
+</data-sources>

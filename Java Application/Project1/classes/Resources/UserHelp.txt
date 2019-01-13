@@ -1,0 +1,78 @@
+'Campus Map Tool and Route Planner' allows you to transform your paper-based campus maps into a dynamic, route-editing, path-finding map tool.  A campus map image can be loaded so that a mathematical map graph consisting of nodes, edges and weights can be created on top of the image and saved to an XML file.  These map graphs represent the buildings, paths and distances of your campus.  The XML file and the image it is coupled with can then be uploaded to your web server and can be accessed by the Applet JAR and mobile Midlet versions of the route planning tool.
+
+1.0) 'File' menu options
+
+	1.1) 'Open Map Image'
+
+The first action you must take is to load an image of your campus map into the application.  Once you choose this option a file selection dialog will appear where a GIF, JPG or PNG image can be selected and then choose 'Open' to load the image into the application.  The menu options 'Create' and 'Options' are disabled until a map image has been loaded into the application.
+
+	1.2) 'Open XML Graph'
+    
+Once an image has been loaded you have the choice to begin creating graph objects using the 'Create' and 'Options' menus or you can load an existing XML graph into the application.  Once you choose this option a file selection dialog will appear where a XML file can be selected and then choose 'Open' to load the map graph into the application.  The XML file is automatically verified to ensure that it was created with this application by checking the name of the root element.  This application uses the root element name 'Campus_Map_Tool_and_Route_Planner' so if any other XML files are loaded with this root element name and they were not created with this application then a graph will not be displayed.  Opening an XML map graph also verifies that the map graph data held in the file fits within the current map image that has been loaded.
+    
+	1.3) 'Save XML Graph'
+
+A map image must first be open before any map graph data can be saved to XML.  An existing xml graph must be open for this save option to become enabled.  However, you can save an XML file even if you have not created any nodes or edges by selecting 'Save As...'.
+    
+	1.4) 'Save As...'
+
+Once you choose this option a file save dialog will appear where a XML file can be created or a previous file can be overwritten.  You can save new XML files by inputting a name for the file into the 'File Name' text entry field.  
+	
+	1.5) 'Exit'    
+
+This option exits the application and closes the frame.  If an XML map graph has been loaded or created so that the image has nodes and edges placed, then you will be asked if you would like to save the XML graph before exiting.
+    
+2.0) 'Edit' menu options
+
+	2.1) 'Insert Nodes' and 'Insert Edges'
+
+The edit menu contains all the tools necessary to start placing the nodes and edges required for a map graph model.  It is recommended to place nodes ('Insert Node') over buildings on the image.  Once this option is selected the nodes can be placed with either mouse button.  A new node that has been placed on the map defaults to a name of 'Choice Point'.  See 'Naming Nodes' for more information.  If you place two or more nodes you can connect them with an edge.  Select 'Insert Edge'.  Firstly, click on the node that will act as the start point and secondly, the node that will act as the end point.  You will see the newly created edge appear between the two points.  These edges are undirected.  This means that you only have to place one edge between two nodes for the direction of travel to occur in both directions.  Each edge has an automatically calculated weight that represents the length of the edge.  A node may contain as many edges as required as long as there is another node to connect the second end to.  You may not place nodes and edges directly on top of existing nodes and edges.  Nodes may slightly overlap one another but this is not always recommended for visual purposes.  You cannot place a node or edge outside of the map image.
+
+	2.2) 'Move Node'
+
+To move a node around the map choose 'Move Node'.  Next click on a node and drag the mouse to where you want to node to be. Any edges connected to a node will be moved as the node is moved and the edge weights will update themselves automatically.  It is not possible to move a node onto another existing node or to move a node outside of the map.  If this happens then the node’s location will be reset to its location before the move took place.
+    
+	2.3) 'Name Node'	
+
+A fundamental part of creating a map graph that represents your campus is to name the building nodes that you place.  By default each node’s name when placed is 'Choice Point'.  However you cannot find campus routes if you have not allocated building nodes you place with a name.  Choice points are used to connect paths and streets together and provide access to the named node buildings.  To name a node, first insert one and then select 'Name Node'.  Then click on the node and a dialog box appears showing the current node name and a text entry box for you to input a new node name.  If you enter the name 'choice point' or 'choice point' with other text following then the name will automatically be set to 'Choice Point'. You can also set a node name to be 'Choice Point' by clicking the button "This node is a choice point".  Next click 'OK' and the node will then have the new name.  If set to 'Choice Point' the node will be coloured yellow, else the node will be coloured blue.
+
+	2.4) 'Remove Item' and 'Remove All'
+
+To remove single items on the map select 'Remove Item'.  Then click on the node or edge and it shall be removed.  If you remove a node that has multiple edges connected to it then these will also be removed.  To remove all the items and clear the map graph completely choose 'Remove All'.
+
+3.0) 'View' menu options
+    
+	3.1) 'Application Frame'
+
+Various application related options may appear under this menu such as showing or hiding the toolbar icons.	
+
+	3.2) 'Hide Graph' and 'Show Graph'	
+
+As you place the nodes and edges onto the map you can see the visual representation of the map’s graph you are creating.  You can hide this graph by selecting 'Hide Graph' and show it again with 'Show Graph'.  If the graph is hidden and a route is selected (see 'Get Route') the route will be shown but the graph will stay hidden.  This is the way in which the Applet and mobile maps are viewed by your users.  
+
+	3.3) 'Zoom In/Out'
+
+The map image is zoomable using the left and right mouse buttons. The left mouse button allows you to zoom in at a scale of + 1 each time.  The right mouse button allows you to zoom out at a scale of - 1 each time.  The default zoom level is 1 and you may not zoom out further than this.  Whilst in a different level of zoom you may still carry out the same functions possible at the default zoom level.  If the screen is maximised at the default zoom level part of the screen may not contain the map image.  This additional space is restricted from map graph editing.
+	
+4.0) 'Options' menu options
+  
+	4.1) 'Set Colour Scheme'
+
+This option presents the user with a colour settings dialog through which the application's default colour settings can be altered.
+
+5.0) 'Run'
+
+	5.1) 'Get Route'
+
+Once a valid graph has been created the tool is ready to be used for route finding.  
+
+-At least two named nodes and one edge must be placed on the map for a graph to form.
+-There must not be standalone nodes on the map that are not connected to anything.
+
+If these criteria are not met then an error message will inform you so and the graph will not create.
+
+	*Note*
+
+There are two types of graph that a user could create, connected graphs and unconnected graphs.  A fully connected graph ensures that there is always a route from one node to any other node and an unconnected graph may contain splits or divisions which may look like one or more connected graphs.  A user created graph should be fully connected so that one node may reach any other node on the graph.  Dijkstra's algorithm for finding shortest path routes is not compatible with unconnected graphs.  If the graph is not fully connected you will receive an error message indicating this.
+
+Select 'Get Route' to be presented with a dialog in which you must select the start location and goal location from the list of building names.  Once you have clicked 'OK' the route will be displayed.  This occurs by automatically colouring the edges green in the route that contains the shortest path and by hiding the rest of the graph.  To show the graph fully again select 'Show Graph'.  You are now ready to choose another route or continue editing your map.

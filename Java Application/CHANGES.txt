@@ -1,0 +1,76 @@
+-----------------------------------------------------
+-Campus Map Tool and Route Planner Application V.2.0-
+-----------------------------------------------------
+
+--------------------------------
+-Updates and changes from V.1.0-
+--------------------------------
+
+V.1.0 of this software application was created for my university final year project/dissertation
+and is not available to purchase or download.  This current version (V.2.0) has a number of
+updates and changes from V.1.0 that have made it both easier to use and more productive.
+
+-Requirement for MS Access database removed.  Building names are now typed input instead of list selected depending on database data.
+-A new and improved menu structure for the application's main frame, that is more logical and includes icons.
+-An optional toolbar with icons for each menu item.
+-A new file open dialog to manually select a map image (GIF/JPG/PNG) from the system.
+-A new file open dialog to manually select an XML map graph file from the system.
+-A new file save dialog to manually save a map graph as an XML file to the system.
+-Automatic check of XML file on load to see if it was created for use with this application.
+-Automatic check of XML file on load to see whether the map graph will fit the loaded map image or not.
+-Nodes are now drawn in the centre of the mouse click point and not to the botton right hand corner.
+-A improved zoom function with new icon that now operates on mouse click locations, centering and zooming to the selected mouse click area.
+-An updated user help dialog.
+-An updated and improved error handling and error message display framework.
+-Added a new application image icon.
+-Added a new application splash screen.
+-Added a new application text panel with 'getting started' instructions.
+-Removed the need to click "Create Graph Object" before "Get Route".
+-Get route dialog now includes option to leave dialog window open when route is displayed for quick selection of next route and the option to view a
+ 	route alongside the rest of the map graph's nodes and edges you are creating.
+-Save confirmation boxes now include cancel button.
+-Menu items are now only active when the situation allows them to be selected.
+-Colour chooser dialog added to set the application's main colours (nodes, edges etc).
+-When creating an edge the first node selected changes its colour to highlight the node selected.
+-A statusbar is now included that displays details of user actions performed.
+
+------------------
+-Refactoring------
+------------------
+
+-refactoring program
+-add and implement interfaces
+
+----------------------------
+-future updates and changes-
+----------------------------
+
+-To add right mouse click context menu options to nodes and edges
+-Mouse over nodes/edges - highlight border colour change/tooltiptext node name
+-ability to view node names on mouse over or "turn on" to display all
+-ability to view weight as mouse over on edge or "turn on" weights to be displayed over edges
+-output window to view build steps and log of all other user actions
+-a details pane of information on current nodes, edges, weights
+-always scroll to new route when it is displayed if not maximised
+-To relate weight "distances" to some kind of real world distance (km/m/miles/feet etc)
+-To apply names to edges (if want to) in order to create text based instructions in addition to map (output window)
+-To save these instructions to a new txt file
+-To add customisable settings dialog (eg zoom factor, mouse button actions)
+-To save colour scheme and settings to seperate XML file.-
+-To add TIF,TIFF and BMP image file compatiblity
+-To zoom the image out further
+-automated build of jar file based on current map and xml - for transfer direct to web server
+-perhaps include the transfer to a specified server location
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,11 @@
+-----------------
+-Web Application-
+-----------------
+
+-Personalise and remove reference to Plymouth University
+-Personal page
+-Page with Applet demo for plymouth uni
+-Add pages about the desktop application, applet and midlet selling the products 
+-Download/buy page for products
+-Instructions page for setting up xml, images, applet JAR, website pages and servlets/mobile classes
+-Add more colour and visual features

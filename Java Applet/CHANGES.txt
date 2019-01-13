@@ -1,0 +1,7 @@
+-----------------------------
+-Campus route planner applet-
+-----------------------------
+
+-Adapt auto sizing code to other browsers apart from I.E/Netscape
+-Browser re-sizing should refresh browser automatically for applet re-sizing
+-Zoom?
