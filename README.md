@@ -1,0 +1,2 @@
+# Campus-Map-Tool-And-Route-Planner
+The core portion of my university final year project 'Campus Map Tool And Route Planner' created in 2006. It consists of Java desktop and web applications that allowed university students to find the shortest paths (measured in image pixels, using Dijkstra's algorithm) between university buildings on campus. This is devised using a node &amp; path graph that had been drawn and saved over a paper version of the campus map and saved to a back-end server.
